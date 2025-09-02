@@ -1,5 +1,6 @@
 # Ignore CMake build folder
 cpp11_version/build/
+cpp14_version/build/
 /CMakeFiles/
 /CMakeCache.txt
 Makefile
