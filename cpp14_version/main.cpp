@@ -9,34 +9,30 @@ struct Person
     int age;
 
     Person(const std::string& n, int a)
-        : name(n),
-          age(a)
-          {
-          }
+        : name(n),   // initialize member `name` with argument `n`
+            age(a)     // initialize member `age` with argument `a`
+        {
+            // constructor body (can be empty or contain more code)
+        }
 };
-
-bool compareByAge(const Person& a, const Person& b)
-{
-    return a.age < b.age;
-}
 
 int main()
 {
     std::vector<Person> people;
-    people.push_back(Person("Arjun", 20));
-    people.push_back(Person("Bhuvan", 15));
-    people.push_back(Person("Charan", 25));
-	people.push_back(Person("Dheeraj", 23));
-    std::vector<Person>::iterator it;
-    std::cout << "People list (C++11 base version, non-lambda):\n";
-    for(it = people.begin(); it != people.end(); ++it)
-        std::cout << it->name << " Age is " << it->age << "\n";
+    people.emplace_back("Arjun", 20);
+    people.emplace_back("Bhuvan", 15);
+    people.emplace_back("Charan", 25);
+	people.emplace_back("Dheeraj", 23);
+    std::cout << "People list (C++14 version, emplace_back + lambda):\n";
+    for(const auto& p : people)
+        std::cout << p.name << " Age is " << p.age << "\n";
     
-    std::sort(people.begin(), people.end(), compareByAge);
+    std::sort(people.begin(), people.end(), 
+        [](const Person& a, const Person& b) { return a.age < b.age; });
 
     std::cout << "\nSorted by age:\n";
-    for(it = people.begin(); it != people.end(); ++it)
-        std::cout << it->name << " Age is " << it->age << "\n";
+    for(const auto& p : people)
+        std::cout << p.name << " Age is " << p.age << "\n";
 
     return 0;
 }
