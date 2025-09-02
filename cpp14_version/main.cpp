@@ -9,11 +9,10 @@ struct Person
     int age;
 
     Person(const std::string& n, int a)
-        : name(n),  // initialize member `name` with argument `n`
-          age(a)   // initialize member `age` with argument `a`
-        {
-            // constructor body (can be empty or contain more code) 
-        }
+        : name(n),
+          age(a)
+          {
+          }
 };
 
 bool compareByAge(const Person& a, const Person& b)
