@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <ranges>
 
 struct Person
 {
@@ -30,19 +31,17 @@ int main()
         {"Charan", 25},
 	    {"Dheeraj", 23},
     };
-    std::cout << "People list (C++11 base version):\n";
+    std::cout << "People list (C++20 base version):\n";
     //Iterator variable is std::vector<Person>::iterator it;
-    //Use both iterator and range based loops
-    for(auto it = people.begin(); it != people.end(); ++it)
-        std::cout << it->name << " Age is " << it->age << "\n";
+    for(const auto& p : people)
+        std::cout << p.name << " Age is " << p.age << "\n";
     
-    std::sort(people.begin(), people.end(), 
-        [](const Person& a, const Person& b) {  return a.age < b.age; });
+    std::ranges::sort(people, std::less<>{}, &Person::age);
     // Prior to C++ 11 Non lamda version std::sort(people.begin(), people.end(), compareByAge);
 
     std::cout << "\nSorted by age:\n";
-    for(const auto& p : people)
-        std::cout << p.name << " Age is " << p.age << "\n";
-
+    //use auto or class name
+    //std::ranges::for_each(people, [](const Person& p) { std::cout << p.name << "age is "<< p.age ;});
+    std::ranges::for_each(people, [](const auto& p) { std::cout << p.name << "age is "<< p.age << "\n";});
     return 0;
 }
