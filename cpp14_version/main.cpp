@@ -30,14 +30,14 @@ int main()
         {"Charan", 25},
 	    {"Dheeraj", 23},
     };
-    std::cout << "People list (C++11 base version):\n";
+    std::cout << "People list (C++14  version):\n";
     //Iterator variable is std::vector<Person>::iterator it;
     //Use both iterator and range based loops
     for(auto it = people.begin(); it != people.end(); ++it)
         std::cout << it->name << " Age is " << it->age << "\n";
     
     std::sort(people.begin(), people.end(), 
-        [](const Person& a, const Person& b) {  return a.age < b.age; });
+        [](const auto& a, const auto& b) {  return a.age < b.age; });
     // Prior to C++ 11 Non lamda version std::sort(people.begin(), people.end(), compareByAge);
 
     std::cout << "\nSorted by age:\n";
