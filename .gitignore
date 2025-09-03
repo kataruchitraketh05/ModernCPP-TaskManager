@@ -1,1 +1,10 @@
-/build*/
+# Ignore CMake build folder
+cpp11_version/build/
+cpp14_version/build/
+cpp17_version/build/
+cpp20_version/build/
+/CMakeFiles/
+/CMakeCache.txt
+Makefile
+*.o
+*.exe
