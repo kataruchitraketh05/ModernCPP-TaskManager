@@ -30,7 +30,7 @@ int main()
         {"Charan", 25},
 	    {"Dheeraj", 23},
     };
-    std::cout << "People list (C++11 base version):\n";
+    std::cout << "People list (C++17 version):\n";
     //Iterator variable is std::vector<Person>::iterator it;
     //Use both iterator and range based loops
     for(auto it = people.begin(); it != people.end(); ++it)
@@ -41,8 +41,8 @@ int main()
     // Prior to C++ 11 Non lamda version std::sort(people.begin(), people.end(), compareByAge);
 
     std::cout << "\nSorted by age:\n";
-    for(const auto& p : people)
-        std::cout << p.name << " Age is " << p.age << "\n";
+    for(auto& [name, age] : people)
+        std::cout << name << " Age is " << age << "\n";
 
     return 0;
 }
