@@ -5,4 +5,5 @@ project(cpp17_app)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(app main.cpp)
+add_executable(main_app main.cpp)
+add_executable(task_manager_app taskManager.cpp)
