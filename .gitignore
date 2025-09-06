@@ -3,6 +3,7 @@ cpp11_version/build/
 cpp14_version/build/
 cpp17_version/build/
 cpp20_version/build/
+DSA/build
 /CMakeFiles/
 /CMakeCache.txt
 Makefile
