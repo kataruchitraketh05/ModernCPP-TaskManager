@@ -2,6 +2,13 @@
 #include <vector>
 #include <memory>
 
+// Optional: Use a Concept to enforce constraints on the Task class
+template<typename T>
+concept TaskConcept = requires(T t) {
+    { t.getName() } -> std::same_as<std::string>;
+    { t.getOrder() } -> std::same_as<int>;
+};
+
 class Task 
 {
     std::string name;

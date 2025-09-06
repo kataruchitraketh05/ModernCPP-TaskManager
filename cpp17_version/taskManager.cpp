@@ -19,8 +19,7 @@ class TaskManager
 public:
     void addTask(const std::string& n, int o) 
     {
-        std::unique_ptr<Task> t(new Task(n, o));
-        tasks.push_back(std::move(t));
+       tasks.push_back(std::make_unique<Task>(n, o));
     }
 
     std::size_t getTasksCount() const { return tasks.size(); }
