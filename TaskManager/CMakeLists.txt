@@ -12,6 +12,8 @@ add_executable(task_manager_thread_mutex task_manager_thread_with_mutex.cpp)
 add_executable(task_manager_thread_pro_con task_manager_thread_producer_consumer_model.cpp)
 add_executable(task_manager_simple_thread_pool_1 task_manager_with_simple_thread_pool_1.cpp)
 add_executable(task_manager_simple_thread_pool_2 task_manager_with_simple_thread_pool_2.cpp)
+add_executable(simple_counter_with_mutex simple_counter_with_mutex.cpp)
+add_executable(simple_counter_with_atomic simple_counter_with_atomic.cpp)
 # Now, link your executable to the thread library
 # Needed to link thread libraries
 target_link_libraries(task_manager_thread_mutex PRIVATE Threads::Threads)
