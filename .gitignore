@@ -3,7 +3,8 @@ cpp11_version/build/
 cpp14_version/build/
 cpp17_version/build/
 cpp20_version/build/
-TaskManager/build
+TaskManager/build/
+SmartPointers/build/
 /CMakeFiles/
 /CMakeCache.txt
 Makefile
