@@ -5,6 +5,7 @@ cpp17_version/build/
 cpp20_version/build/
 TaskManager/build/
 SmartPointers/build/
+OOPS/build/
 /CMakeFiles/
 /CMakeCache.txt
 Makefile
