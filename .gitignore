@@ -1,11 +1,12 @@
 # Ignore CMake build folder
-cpp11_version/build/
-cpp14_version/build/
-cpp17_version/build/
-cpp20_version/build/
+cpp11_sort_task_manager/build/
+cpp14_sort_task_manager/build/
+cpp17_sort_task_manager/build/
+cpp20_sort_task_manager/build/
 TaskManager/build/
 SmartPointers/build/
 OOPS/build/
+C++_IO_FILE_STREAMS/build/
 /CMakeFiles/
 /CMakeCache.txt
 Makefile
